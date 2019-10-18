@@ -35,7 +35,7 @@ body {
     line-height: 22px;
     font-weight: 500;
     color: #ffffff;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 a {
@@ -67,6 +67,10 @@ a {
 /*FOOTER*/
 .footer {
     min-height: 108px;
+
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
 }
 
 .footer .social-button {
@@ -107,32 +111,43 @@ a {
 }
 
 .footer-information {
-    font-size: 13px;
-    line-height: 16px;
-}
-
-.footer-information {
     display: flex;
+    margin-top: 32px;
 }
 
-.row a {
-    display: block;
+.footer-information .column {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 
-.footer-information .bold {
+.footer-information .column-right {
+    margin-left: 30px;
+}
+
+.column .bold {
     font-weight: 700;
 }
 
-.footer-information ul {
-    display: flex;
+.column .top-row {
+    font-size: 13px;
+    line-height: 16px;
+
+    margin-bottom: 7px;
 }
 
 .footer-copyright {
     display: flex;
     flex-direction: column;
+
+    margin-top: 18px;
+}
+
+.footer-copyright span {
+    font-size: 12px;
+    line-height: 16px;
 }
 
 .main {
     min-height: 600px;
 }
-
