@@ -39,8 +39,11 @@ body {
 }
 
 a {
+    display: inline;
+
     text-decoration: none;
     border-bottom:1px solid rgba(255, 255, 255, 0.2);
+
     color: #ffffff;
 }
 
@@ -61,7 +64,33 @@ a {
 
 /*HEADER*/
 .header {
+    display: flex;
+    position: relative;
     min-height: 74px;
+}
+
+.contacts {
+    position: absolute;
+    left: 980px;
+    top: 75px;
+}
+
+.contacts .time {
+    display: block;
+
+    padding-left: 15px;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.contacts .call {
+    border: none;
+
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
 }
 
 /*FOOTER*/
@@ -80,6 +109,8 @@ a {
 .footer-content {
     display: flex;
     justify-content: space-between;
+
+    position: relative;
 
     margin: 0 2.2%;
 }
@@ -115,8 +146,24 @@ a {
     margin-top: 32px;
 }
 
+.footer-information::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    background-image: url("./img/svg/heart.svg");
+    background-repeat: no-repeat;
+
+    top: 35px;
+    left: 400px;
+
+    width: 15px;
+    height: 13px;
+}
+
 .footer-information .column {
     display: flex;
+    align-items: flex-start;
     box-sizing: border-box;
     flex-direction: column;
 }
@@ -130,9 +177,6 @@ a {
 }
 
 .column .top-row {
-    font-size: 13px;
-    line-height: 16px;
-
     margin-bottom: 7px;
 }
 
@@ -147,6 +191,9 @@ a {
     font-size: 12px;
     line-height: 16px;
 }
+
+
+
 
 .main {
     min-height: 600px;
