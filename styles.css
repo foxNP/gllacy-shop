@@ -191,10 +191,11 @@ a {
     height: 32px;
     margin-top: 22px;
     align-items: center;
+    transition: all .3s ;
 }
 
-.menu a:hover {
-    color: black;
+.menu a {
+    color: inherit;
 }
 
 .hiding {
