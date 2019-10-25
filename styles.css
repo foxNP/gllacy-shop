@@ -55,15 +55,6 @@ a {
     margin: -1px;
 }
 
-.hide-box {
-    display: flex;
-}
-
-.hide-box-inner {
-    display: none;
-    position: absolute;
-}
-
 .container {
     max-width: 1200px;
     min-width: 900px;
@@ -92,6 +83,13 @@ a {
     margin-right: 10px;
 }
 
+.header-wrapper {
+    display: flex;
+    width: 100%;
+
+    margin-top: 22px;
+}
+
 .header-content .navigation {
     box-sizing: border-box;
     align-items: flex-start;
@@ -101,11 +99,12 @@ a {
 }
 
 .navigation .nav-link {
+    display: inline-block;
     padding: 8px 14px;
     background-color: transparent;
     border-radius: 16px;
     border: transparent;
-    margin-top: 22px;
+
 }
 
 .navigation .nav-link:hover {
@@ -117,7 +116,6 @@ a {
 .navigation .nav-link:hover .text {
     border: none;
 }
-
 
 .navigation .nav-link:active {
     background-color: rgba(248, 247, 244, 0.988);
@@ -133,6 +131,54 @@ a {
     border-bottom:1px solid rgba(255, 255, 255, 0.2);
 }
 
+.hide-box {
+    display: flex;
+    position: relative;
+}
+
+.hide-box-inner {
+    display: block;
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    top: 40px;
+}
+
+.hide-box:hover .hide-box-inner {
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    top: 40px;
+}
+
+.hide-box-inner ul {
+    list-style: none;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.hide-link {
+    display: inline-block;
+    color: #000000;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+
+    padding: 9px 10px;
+
+    white-space: nowrap;
+}
+
+.hide-list li:first-child {
+    border-bottom: 1px solid #e3e3e0;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
 .search {
     box-sizing: border-box;
 
@@ -142,7 +188,6 @@ a {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
 
-    margin-top: 22px;
     margin-left: 25px;
 }
 
@@ -159,7 +204,6 @@ a {
 
 .entrance-link {
     padding: 8px 17px 8px 45px;
-    margin-top: 22px;
     margin-left: 10px;
 
     border: none;
@@ -181,7 +225,6 @@ a {
 
 .basket-link {
     padding: 8px 34px 8px 45px;
-    margin-top: 22px;
     margin-left: 10px;
 
     border: none;
@@ -215,7 +258,6 @@ a {
 
     font-size: 22px;
     line-height: 24px;
-    font-weight: 700;
 }
 
 .menu:hover .hiding,
@@ -307,10 +349,6 @@ a {
     margin-left: 30px;
 }
 
-.column .bold {
-    font-weight: 700;
-}
-
 .column .top-row {
     margin-bottom: 5px;
 }
@@ -327,6 +365,9 @@ a {
     line-height: 16px;
 }
 
+.bold {
+    font-weight: 700;
+}
 
 
 
