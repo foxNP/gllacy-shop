@@ -132,23 +132,26 @@ a {
     position: relative;
 }
 
-.hide-box-inner {
+.class-hide {
     display: none;
+    padding-top: 5px;
+
     position: absolute;
-    border-radius: 5px;
-    background-color: rgb(248, 247, 244);
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-    top: 40px;
     left: -5px;
+
+    z-index: 1;
 }
 
-.hide-box:hover .hide-box-inner {
-    position: absolute;
+.hide-box:hover .class-hide {
+    display: block;
+}
+
+
+.hide-box-inner {
     display: block;
     border-radius: 5px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-    top: 40px;
 }
 
 .hide-box:hover .nav-link {
