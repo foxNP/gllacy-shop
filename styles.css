@@ -47,6 +47,24 @@ a {
     color: #ffffff;
 }
 
+.button {
+    display: inline-block;
+    padding: 11px 26px;
+
+    border: none;
+    border-radius: 22px;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+
+    background-image: -moz-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -83,7 +101,7 @@ a {
     margin-right: 10px;
 }
 
-.header-wrapper {
+.header-elements-wrapper {
     display: flex;
     width: 100%;
 
@@ -112,7 +130,7 @@ a {
     color: #000000;
 }
 
-.navigation .nav-link:hover .text {
+.navigation .nav-link:hover .link-content {
     border: none;
 }
 
@@ -120,11 +138,11 @@ a {
     box-shadow: inset 0 2px 1px #696969;;
 }
 
-.navigation .nav-link:active .text {
+.navigation .nav-link:active .link-content {
     border: none;
 }
 
-.nav-link .text {
+.nav-link .link-content {
     border-bottom:1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -132,7 +150,7 @@ a {
     position: relative;
 }
 
-.class-hide {
+.hide-box-wrapper{
     display: none;
     padding-top: 5px;
 
@@ -142,7 +160,7 @@ a {
     z-index: 1;
 }
 
-.hide-box:hover .class-hide {
+.hide-box:hover .hide-box-wrapper {
     display: block;
 }
 
@@ -160,7 +178,7 @@ a {
     color: #000000;
 }
 
-.hide-box:hover .text {
+.hide-box:hover .link-content {
     border: none;
 }
 
@@ -218,6 +236,41 @@ a {
 
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
+}
+
+.entrance-form a {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+
+    color: #000000;
+
+    border-bottom: 1px solid #dfdedc;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.entrance-form {
+    padding: 20px 17px;
+}
+
+.entrance-form .data-entry{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+    margin-bottom: 20px;
+
+    border: 1px solid #fbf7f5;
+    border-radius: 5px;
+}
+
+.button-link {
+    display: flex;
+    align-items: center;
+
 }
 
 .basket {
@@ -383,3 +436,6 @@ a {
     min-height: 2234px;
 }
 
+.link a:first-child {
+    margin-bottom: 5px;
+}
