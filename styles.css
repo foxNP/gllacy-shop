@@ -22,13 +22,16 @@
 html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
 }
 
 body {
     margin: 0;
     padding: 0;
-
-    background-color: #849d8f;
 
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
@@ -36,6 +39,18 @@ body {
     font-weight: 500;
     color: #ffffff;
     text-transform: none;
+}
+
+.background-3 {
+    background-color: #9d8b84;
+}
+
+.background-2 {
+    background-color: #8996a6;
+}
+
+.background-1 {
+    background-color: #849d8f;
 }
 
 a {
@@ -109,9 +124,8 @@ a {
 }
 
 .header-content .navigation {
-    box-sizing: border-box;
-    align-items: flex-start;
     display: flex;
+    align-items: flex-start;
     flex-grow: 1;
     flex-wrap: wrap;
 }
@@ -155,6 +169,7 @@ a {
     padding-top: 5px;
 
     position: absolute;
+    top: 34px;
     left: -5px;
 
     z-index: 1;
@@ -190,6 +205,7 @@ a {
 
 .hide-link {
     display: inline-block;
+
     color: #000000;
     font-size: 14px;
     line-height: 16px;
@@ -198,6 +214,8 @@ a {
     padding: 10px 10px 3px 10px;
 
     white-space: nowrap;
+
+    border: none;
 }
 
 .hide-list li:first-child {
@@ -206,8 +224,6 @@ a {
 }
 
 .search {
-    box-sizing: border-box;
-
     width: 33px;
     height: 33px;
 
@@ -218,8 +234,6 @@ a {
 }
 
 .entrance {
-    box-sizing: border-box;
-
     display: flex;
     align-items: flex-start;
 
@@ -251,6 +265,10 @@ a {
     margin-left: 20px;
 }
 
+.link-wrapper a:first-child {
+    margin-bottom: 5px;
+}
+
 .entrance-form {
     padding: 20px 17px;
 }
@@ -258,7 +276,6 @@ a {
 .entrance-form .data-entry{
     display: block;
     width: 100%;
-    box-sizing: border-box;
 
     padding: 12px 14px;
     margin-bottom: 20px;
@@ -267,15 +284,13 @@ a {
     border-radius: 5px;
 }
 
-.button-link {
+.form-button {
     display: flex;
     align-items: center;
 
 }
 
 .basket {
-    box-sizing: border-box;
-
     display: flex;
     align-items: flex-start;
 
@@ -321,13 +336,6 @@ a {
     line-height: 24px;
 }
 
-.menu:hover .hiding,
-.search:hover .hiding,
-.entrance:hover .hiding {
-    position: absolute;
-    display: block;
-}
-
 .menu a {
     color: inherit;
 }
@@ -369,6 +377,8 @@ a {
 }
 
 .border-social {
+    box-sizing: content-box;
+
     width: 32px;
     height: 32px;
 
@@ -401,9 +411,8 @@ a {
 
 .footer-information .column {
     display: flex;
-    align-items: flex-start;
-    box-sizing: border-box;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer-information .column-right {
@@ -426,16 +435,21 @@ a {
     line-height: 16px;
 }
 
+.footer-link:hover {
+    color: rgb(255, 188, 158);;
+    border-bottom: 1px solid rgb(255, 188, 158);;
+}
+
+.footer-link:active {
+    color: rgb(255, 188, 158);;
+    border-bottom: 1px solid rgb(255, 188, 158);;
+}
+
 .bold {
     font-weight: 700;
 }
-
-
 
 .main {
     min-height: 2234px;
 }
 
-.link a:first-child {
-    margin-bottom: 5px;
-}
