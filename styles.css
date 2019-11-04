@@ -156,6 +156,15 @@ a {
     border: none;
 }
 
+.hide-box .nav-link.active {
+    color: #ffffff!important;
+    background-color: #d07058!important;
+}
+
+.hide-box .nav-link.active .link-content {
+    border: none;
+}
+
 .nav-link .link-content {
     border-bottom:1px solid rgba(255, 255, 255, 0.2);
 }
@@ -199,38 +208,71 @@ a {
 
 .hide-box-inner .hide-list {
     list-style: none;
-    padding: 0 10px 10px 10px;
+    padding: 10px 0;
     margin: 0;
 }
 
 .hide-link {
-    display: inline-block;
-
+    display: block;
+    position: relative;
     color: #000000;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
-
-    padding: 10px 10px 3px 10px;
-
+    padding: 10px 20px 3px 20px;
     white-space: nowrap;
-
     border: none;
+    transition: all .3s;
+}
+
+.hide-link:hover {
+    background-color: rgb(251, 222, 215);
+}
+
+.hide-link:active{
+    background-color: rgb(246, 181, 165);
 }
 
 .hide-list li:first-child {
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e3e3e0;
+    margin-bottom: 8px;
+}
+
+.hide-list li:first-child::after {
+    content: "";
+
+    position: absolute;
+    right: 8px;
+    top: 48px;
+
+    height: 1px;
+    width: calc(100% - 15px);
+
+    background-color: #e3e3e0;
+}
+
+.hide-list .active a {
+    color: #ffffff;
+    background-color: #d07058;
 }
 
 .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 33px;
     height: 33px;
-
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-
     margin-left: 25px;
+    transition: all .3s;
+}
+
+.search:hover {
+    background-color: #ffffff;
+}
+
+.search:hover path {
+    fill: black;
 }
 
 .entrance {
@@ -448,6 +490,8 @@ a {
 .bold {
     font-weight: 700;
 }
+
+
 
 .main {
     min-height: 2234px;
