@@ -118,6 +118,7 @@ a {
 
 .header-elements-wrapper {
     display: flex;
+    align-items: flex-start;
     width: 100%;
 
     margin-top: 22px;
@@ -259,11 +260,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33px;
-    height: 33px;
+    width: 34px;
+    height: 34px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     margin-left: 25px;
+    transition: all .3s;
+    cursor: pointer;
     transition: all .3s;
 }
 
@@ -284,14 +287,30 @@ a {
     font-weight: 700;
 }
 
-.entrance-link {
-    padding: 8px 17px 8px 45px;
+.entrance:hover .entrance-wrapper {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.entrance:hover path {
+    fill: black;
+}
+
+.entrance-wrapper path {
+    transition: all .3s;
+}
+
+.entrance-wrapper {
+    position: relative;
+    padding: 9px 17px 9px 45px;
     margin-left: 10px;
 
     border: none;
 
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
+    cursor: pointer;
+    transition: all .3s;
 }
 
 .entrance-form a {
@@ -326,6 +345,12 @@ a {
     border-radius: 5px;
 }
 
+.entrance-icon {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+
 .form-button {
     display: flex;
     align-items: center;
@@ -341,14 +366,41 @@ a {
     font-weight: 700;
 }
 
-.basket-link {
-    padding: 8px 34px 8px 45px;
+.shopping-basket polygon {
+    fill: #E84D37;
+}
+.shopping-basket path {
+    fill: #343434;
+}
+.shopping-basket circle {
+    fill: #343434;
+}
+
+.shopping-basket .purchases {
+    color: #000000;
+}
+
+.shopping-basket .basket-wrapper {
+     background-color: rgb(248, 247, 244);
+}
+
+.basket-wrapper {
+    position: relative;
+
+    padding: 9px 34px 9px 45px;
     margin-left: 10px;
 
     border: none;
 
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
+    cursor: pointer;
+}
+
+.basket-icon {
+    position: absolute;
+    top: 8px;
+    left: 17px;
 }
 
 .contacts {
