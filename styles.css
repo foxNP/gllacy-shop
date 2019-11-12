@@ -517,29 +517,29 @@ a {
 
 .card-product {
     width: 220px;
-    text-align: center;
-    border-radius: 5px;
     position: relative;
     margin-top: 25px;
+    z-index: 2;
 }
 
-
-.card-product:hover .card-product-hover{
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    border-radius: 5px;
-    position: absolute;
+.card-product:hover {
+    z-index: 4;
 }
 
-.card-product .card-button {
-    display: none;
-    margin: 15px 12px 17px 14px;
-    padding: 11px 14px;
-
+.card-product-visible {
+    text-align: center;
+    position: relative;
+    z-index: 3;
 }
 
-.card-product h2 {
+.card-product-visible img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px 10px 0 10px;
+}
+
+.card-product-visible h2 {
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
@@ -564,17 +564,59 @@ a {
     content: url("./img/svg/mnemonics.svg");
 }
 
-.card-product:hover .card-button {
-    display: inline-block;
+.card-product-hide {
+    display: none;
+    position: absolute;
+    width: 220px;
+    height: calc(100% + 77px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    top: 0;
+    z-index: 4;
 }
 
-.card-product img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 10px 10px 0 10px;
+.card-product-hide .card-button {
+    margin: 300px 12px 17px 14px;
+    padding: 11px 14px;
+    position: relative;
+    z-index: 9;
 }
 
+.card-product:hover .card-product-hide {
+    display: block;
+}
+
+
+/*
+
+
+
+.card-product-visible {
+    width: 220px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 25px;
+}
+
+.card-product-inner {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    border-radius: 5px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+*/
 /*FOOTER*/
 .footer {
     min-height: 108px;
