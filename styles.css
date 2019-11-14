@@ -78,9 +78,26 @@ a {
     line-height: 24px;
     font-weight: 700;
     color: #ffffff;
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
     background-image: linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
     box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
     white-space: nowrap;
+}
+
+
+
+.button:active {
+    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+
+h1 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 41px;
+    margin: 0;
+    padding: 0 15px;
 }
 
 .visually-hidden {
@@ -108,7 +125,7 @@ a {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
-    margin: 0 2.2%;
+    margin: 0 20px;
 }
 
 .header-content .logo {
@@ -506,7 +523,46 @@ a {
 
 /*MAIN*/
 .main-content {
-    margin: 0 10px;
+    margin: 0 5px;
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px;
+
+}
+
+.breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0 290px 0 15px;
+}
+
+.breadcrumbs-list li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.breadcrumbs-list li {
+    margin-right: 22px;
+}
+
+.breadcrumbs-list a:hover {
+    color: rgb(255, 188, 158);
+    border-bottom: 1px solid rgb(255, 188, 158);
+}
+.breadcrumbs-list a:active {
+    color: rgb(255, 188, 158);
+    border: none;
+}
+
+.filter {
+    margin-top: 24px;
+    margin-bottom: 39px;
 }
 
 .products {
@@ -633,19 +689,26 @@ a {
 }
 
 .pagination {
-    margin-top: 85px;
-    margin-bottom: 30px;
+    margin-top: 78px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .pagination-list {
     display: flex;
-    justify-content: flex-end;
+    width: 188px;
+    justify-content: space-around;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 16px 0 0;
 }
 
-.pagination-list li {
+.pagination-list a {
+    border: none;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
     width: 27px;
     height: 26px;
     border-radius: 50%;
@@ -655,37 +718,61 @@ a {
     transition: all .3s;
 }
 
-.pagination-list li:not(:first-child):not(:last-child):hover {
+.pagination-list a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-}
-.pagination-list li:not(:first-child):not(:last-child):active {
-    background-color: #ffffff;
-}
-
-.pagination-list li:first-child {
-
-}
-
-.pagination-list a {
-    border: none;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
-    transition: all .3s;
-}
-
-.pagination-list li:hover a {
     color: #ffffff;
 }
-
-.pagination-list li:not(:last-child):active a {
+.pagination-list a:active {
+    background-color: #ffffff;
     color: #000000;
 }
 
+.pagination .pagination-list .arrow-left {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background-color: transparent;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    transform: rotate(-45deg);
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 0px;
+}
 
-/*FOOTER*/
+.pagination .pagination-list .arrow-right {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background-color: transparent;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    transform: rotate(45deg);
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.pagination-list li:first-child {
+    margin-right: 10px;
+}
+
+.pagination-list li:last-child {
+    margin-left: 10px;
+}
+
+.pagination-list .arrow-left:hover,
+.pagination-list .arrow-right:hover {
+    border-color: rgb(255, 188, 158);;
+}
+
+.pagination-list .active {
+    color: #000000!important;
+    background-color: #ffffff!important;
+}
+
+             /*FOOTER*/
 .footer {
-    min-height: 108px;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
@@ -696,9 +783,10 @@ a {
 }
 
 .footer-content {
+    min-height: 108px;
     display: flex;
     justify-content: space-between;
-    margin: 0 2.2%;
+    margin: 0 18px;
 }
 
 .footer-content-inner {
@@ -773,12 +861,12 @@ a {
 }
 
 .footer-link:hover {
-    color: rgb(255, 188, 158);;
+    color: rgb(255, 188, 158);
     border-bottom: 1px solid rgb(255, 188, 158);
 }
 
 .footer-link:active {
-    color: rgb(255, 188, 158);;
+    color: rgb(255, 188, 158);
     border: none;
 }
 

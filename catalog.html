@@ -149,23 +149,19 @@
 </header>
 <main class="main container">
     <div class="main-content">
-<ul class="breadcrumbs">
-    <li><a href="#">Главная</a></li>
-    <li><a href="#">Каталог</a></li>
-    <li>Сливочное</li>
-</ul>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs-list">
+           <li><a href="#">Главная</a></li>
+           <li><a href="#">Каталог</a></li>
+           <li>Сливочное</li>
+          </ul>
+        </div>
     <h1>Сливочное мороженое</h1>
     <section class="filters">
         <h2 class="visually-hidden">Список фильтров</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-        <select class="sorting">
-            <option>по популярности</option>
-            <option>сначала недорогие</option>
-            <option>сначала дорогие</option>
-            <option>по жирности</option>
-        </select>
-            <input type="range" min="0" max="100" step="1" value="50">
-        </form>
+        <div class="sorting">
+            по популярности
     </section>
     <section class="products">
         <div class="card-product">
@@ -292,19 +288,15 @@
     <div class="pagination">
         <ul class="pagination-list">
             <li>
-                <span>
-                    <img src="">
-                </span>
+                <span class="arrow-left"></span>
             </li>
-            <li> <a href="#">1</a> </li>
+            <li> <a href="#" class="active">1</a> </li>
             <li> <a href="#">2</a> </li>
             <li> <a href="#">3</a> </li>
             <li> <a href="#">4</a> </li>
             <li> <a href="#">5</a> </li>
             <li>
-                <a href="#">
-                    <img src="./img/forward.png">
-                </a>
+                <a href="#" class="arrow-right"></a>
             </li>
         </ul>
     </div>
