@@ -582,7 +582,6 @@ h1 {
 .filter ul {
     display: flex;
     list-style: none;
-    position: relative;
     margin: 0;
     padding: 0;
     background-color: rgba(255, 255, 255, 0.2);
@@ -599,10 +598,11 @@ h1 {
     border: none;
 }
 
-.fillers-list li::before {
+.fillers-list label::before {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 0;
+    left: 0;
     width: 20px;
     height: 20px;
     border: 2px solid #ffffff;
@@ -616,11 +616,25 @@ h1 {
     margin-left: 15px;
 }
 
-.filter label {
+.filter .filter-option {
+    position: relative;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
-    margin-left: 32px;
+    padding-left: 32px;
+}
+
+.filter-button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 7px 29px;
+    border: 2px solid #ffffff;
+    background-image: none;
+    text-shadow: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 22px;
+    margin-left: -3px;
 }
 
 .products {
