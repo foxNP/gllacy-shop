@@ -571,31 +571,53 @@ h1 {
     background-image: url("./img/svg/arrow.svg");
 }
 
-.filter {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-top: 24px;
-    margin-bottom: 5px;
+.filters {
+    margin: 24px auto 5px 15px;
+    width: 870px;
 }
 
-.filter ul {
+.filter {
     display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.filter-list {
+    display: flex;
+    padding: 0;
     list-style: none;
     margin: 0;
-    padding: 0;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 18px;
 }
 
-.filter .fillers-list {
-    justify-content: space-between;
+.sorting-list {
+    min-width: 193px;
+    padding: 7px 19px 7px 16px;
+}
+
+.price-list {
+    min-width: 220px;
+    padding: 7px 19px 7px 16px;
+}
+
+.fillers-list {
     min-width: 703px;
     padding: 7px 19px 7px 16px;
 }
 
+.fat-list {
+    min-width: 415px;
+    padding: 9px 19px 8px 16px;
+}
+
 .filter fieldset {
     border: none;
+    padding: 0;
+    margin-top: 6px;
+    margin-bottom: 12px;
 }
 
 .fillers-list label::before {
@@ -606,7 +628,42 @@ h1 {
     width: 20px;
     height: 20px;
     border: 2px solid #ffffff;
-    border-radius: 3px;
+    border-radius: 4px;
+}
+
+.fillers-list label::after {
+    content: url("./img/svg/check.svg");
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.fat-list label::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    width: 22px;
+    height: 22px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+}
+
+.fat-list label::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    opacity: 0;
+    transition: opacity 400ms;
 }
 
 .filter legend {
@@ -614,6 +671,7 @@ h1 {
     font-weight: 500;
     line-height: 16px;
     margin-left: 15px;
+    margin-bottom: 5px;
 }
 
 .filter .filter-option {
@@ -625,21 +683,24 @@ h1 {
 }
 
 .filter-button {
+    display: inline-block;
+    border-radius: 22px;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
     padding: 7px 29px;
     border: 2px solid #ffffff;
-    background-image: none;
-    text-shadow: none;
     background-color: rgba(255, 255, 255, 0.2);
-    margin-top: 22px;
-    margin-left: -3px;
+    color: #ffffff;
+    margin-top: 26px;
+    margin-left: 10px;
+    white-space: nowrap;
 }
 
 .products {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -11px;
 }
 
 .card-product {
