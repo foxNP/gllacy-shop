@@ -735,7 +735,7 @@ h1 {
 .products {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -11px;
+    margin: -11px -11px 0 -11px;
 }
 
 .card-product {
@@ -782,7 +782,17 @@ h1 {
     font-weight: 500;
     line-height: 22px;
     margin: 5px 0;
-    padding: 0 5px;
+    padding: 0 13px;
+}
+
+.card-product-index::before {
+    content: url("./img/hit.png");
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    z-index: 1;
 }
 
 .card-price {
@@ -854,6 +864,12 @@ h1 {
 .card-link:active {
     color: rgb(255, 188, 158);;
     border: none;
+}
+
+.about-company {
+    background-image: url("./img/wafer.jpg");
+    background-repeat: no-repeat;
+    border-radius: 14px;
 }
 
 .pagination {
