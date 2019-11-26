@@ -85,13 +85,6 @@ a {
 }
 
 
-
-.button:active {
-    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
-}
-
-
 h1 {
     font-size: 35px;
     font-weight: 700;
@@ -109,9 +102,18 @@ h1 {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     min-width: 900px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+@media screen and (min-width: 1240px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 27px;
+    }
 }
 
 /*HEADER*/
@@ -125,13 +127,6 @@ h1 {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
-    margin: 0 20px;
-}
-
-@media screen and (min-width: 1240px) {
-    .header-content {
-        margin: 0 27px;
-    }
 }
 
 .header-content .logo {
@@ -527,15 +522,6 @@ h1 {
 }
 
 /*MAIN*/
-.main-content {
-    margin: 0 20px;
-}
-
-@media screen and (min-width: 1240px) {
-    .main-content {
-        margin: 0 27px;
-    }
-}
 
 .name-slider {
     font-size: 60px;
@@ -543,7 +529,6 @@ h1 {
     font-weight: 700;
     width: 670px;
     margin: 315px auto 0 auto;
-    text-align: center;
     text-align: center;
 }
 
@@ -693,7 +678,7 @@ h1 {
     content: "";
     position: absolute;
     top: -3px;
-    left: 0px;
+    left: 0;
     width: 22px;
     height: 22px;
     border: 3px solid #ffffff;
@@ -747,7 +732,9 @@ h1 {
 .products {
     display: flex;
     flex-wrap: wrap;
-    margin: -33px -12px 0 -12px;
+    margin-top: -33px;
+    margin-left: -12px;
+    width: calc(100% + 24px);
 }
 
 .card-product {
@@ -757,7 +744,7 @@ h1 {
     transition: all .3s;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
     .card-product {
         width: 25%;
         position: relative;
@@ -782,7 +769,7 @@ h1 {
     margin: 10px 10px 0 10px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
     .card-product-visible img {
         width: 267px;
         height: 267px;
@@ -816,7 +803,7 @@ h1 {
     left: 8px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
     .card-price {
         top: 215px;
         left: 15px;
@@ -842,7 +829,7 @@ h1 {
     top: 0;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
     .card-product-hide {
         width: 100%;
         height: calc(100% + 77px);
@@ -854,7 +841,7 @@ h1 {
     padding: 11px 14px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
     .card-product-hide .card-button {
         padding: 11px 18px;
     }
@@ -880,9 +867,8 @@ h1 {
 
 .about-company {
     background-image: url("./img/wafer.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     border-radius: 14px;
-    background-size:cover;
     padding: 25px 20px 0 17px;
     margin: 34px 0 40px 0;
 }
@@ -964,53 +950,81 @@ h1 {
     left: 12px;
 }
 
-.banners {
+.promo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 40px 0;
 }
 
-.banner1 {
-    width: 50%;
-    padding-right: 10px;
-}
-
-.banner2 {
-    width: 50%;
-    padding-left: 10px;
+.promo-card {
+    width: calc(50% - 10px);
 }
 
 @media screen and (min-width: 1240px) {
-    .banner1 {
-        padding-right: 13px;
+    .promo-card {
+        width: calc(50% - 13px);
     }
 }
 
-@media screen and (min-width: 1240px) {
-    .banner2 {
-        padding-left: 13px;
-    }
+.promo1 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #ffffff;
 }
 
-.banner-raspberries {
+.promo2 {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.promo-raspberries {
     background-image: url("./img/raspberries.jpg");
     background-repeat: no-repeat;
     border-radius: 14px;
     background-size: cover;
 }
 
-.banner-chocolate {
+.promo-chocolate {
     background-image: url("./img/chocolate.jpg");
     background-repeat: no-repeat;
     border-radius: 14px;
     background-size: cover;
 }
 
-.banner-blog {
+.promo-blog {
+    color: #000000;
+    font-weight: 500;
     background-image: url("./img/blog.jpg");
     background-repeat: no-repeat;
     border-radius: 14px;
     background-size: cover;
+}
+
+.promo-blog a {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.promo-form {
+    color: #000000;
+}
+
+.map {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+}
+
+@media screen and (min-width: 1240px) {
+    .map {
+        width: calc(100% + 54px);
+        margin-left: -27px;
+    }
 }
 
 .pagination {
@@ -1075,7 +1089,7 @@ h1 {
     transform: rotate(45deg);
     transition: all .3s;
     cursor: pointer;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .pagination-list li:first-child {
@@ -1088,13 +1102,15 @@ h1 {
 
 .pagination-list .arrow-left:hover,
 .pagination-list .arrow-right:hover {
-    border-color: rgb(255, 188, 158);;
+    border-color: rgb(255, 188, 158);
 }
 
 .pagination-list .active {
     color: #000000!important;
     background-color: #ffffff!important;
 }
+
+
 
              /*FOOTER*/
 .footer {
@@ -1111,13 +1127,6 @@ h1 {
     min-height: 108px;
     display: flex;
     justify-content: space-between;
-    margin: 0 20px;
-}
-
-@media screen and (min-width: 1240px) {
-    .footer-content {
-        margin: 0 27px;
-    }
 }
 
 .footer-content-inner {
