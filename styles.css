@@ -30,6 +30,7 @@ html {
 }
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: Roboto, Arial, sans-serif;
@@ -82,15 +83,23 @@ a {
     background-image: linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
     box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
     white-space: nowrap;
+    cursor: pointer;
 }
 
 
 h1 {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 41px;
     margin: 0;
     padding: 0 15px;
+}
+
+h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 41px;
+    margin: 15px 0;
 }
 
 .visually-hidden {
@@ -911,7 +920,7 @@ h1 {
     content: "";
     width: 50px;
     height: 50px;
-    background-image: url("./img/svg/ice_cream.png");
+    background-image: url("./img/ice_cream.png");
     background-repeat: no-repeat;
     top: -15px;
     left: 0;
@@ -922,7 +931,7 @@ h1 {
     content: "";
     width: 50px;
     height: 50px;
-    background-image: url("./img/svg/cow.png");
+    background-image: url("./img/cow.png");
     background-repeat: no-repeat;
     top: -15px;
     left: 12px;
@@ -933,7 +942,7 @@ h1 {
     content: "";
     width: 50px;
     height: 50px;
-    background-image: url("./img/svg/sheet.png");
+    background-image: url("./img/sheet.png");
     background-repeat: no-repeat;
     top: -15px;
     left: 0;
@@ -944,7 +953,7 @@ h1 {
     content: "";
     width: 50px;
     height: 50px;
-    background-image: url("./img/svg/thermometr.png");
+    background-image: url("./img/thermometr.png");
     background-repeat: no-repeat;
     top: -15px;
     left: 12px;
@@ -957,12 +966,31 @@ h1 {
 }
 
 .promo-card {
+    display: flex;
+    flex-direction: column;
     width: calc(50% - 10px);
+    padding-right: 21px;
+    padding-left: 20px;
 }
 
 @media screen and (min-width: 1240px) {
     .promo-card {
         width: calc(50% - 13px);
+    }
+}
+
+.promo1 .button {
+    margin-bottom: 22px;
+    margin-left: auto;
+}
+
+.promo-text {
+    margin-bottom: 23px;
+}
+
+@media screen and (min-width: 1240px) {
+    .promo-text {
+        margin-bottom: 45px;
     }
 }
 
@@ -1003,28 +1031,62 @@ h1 {
     background-size: cover;
 }
 
-.promo-blog a {
+.promo-blog .promo-link {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
     color: #000000;
-    border-bottom: 2px solid #000000;
+}
+
+.promo-link{
+    box-shadow:0px 2px 0px 0px rgba(0,0,0,0);
 }
 
 .promo-form {
     color: #000000;
 }
 
-.map {
+#map {
     width: calc(100% + 40px);
+    height: 430px;
+    padding: 0;
     margin-left: -20px;
+    background-color: #a7a8ab;
 }
 
 @media screen and (min-width: 1240px) {
-    .map {
+    #map {
         width: calc(100% + 54px);
         margin-left: -27px;
     }
+}
+
+.address {
+    position: relative;
+}
+
+.address .feedback {
+    position: absolute;
+    right: 0;
+    top: 63px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000000;
+    width: 302px;
+    padding: 30px 25px;
+    background-color: #fdfdfc;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.feedback .bold {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.feedback .block {
+    margin-bottom: 25px;
 }
 
 .pagination {
@@ -1109,9 +1171,6 @@ h1 {
     color: #000000!important;
     background-color: #ffffff!important;
 }
-
-
-
              /*FOOTER*/
 .footer {
     font-size: 13px;
@@ -1209,6 +1268,26 @@ h1 {
     color: rgb(255, 188, 158);
     border: none;
 }
+
+.modal-feedback {
+    position: fixed;
+    width: 480px;
+    color: #000000;
+    background-color: #f8f7f4;
+    top: 340px;
+    left: 50%;
+    margin-left: -240px;
+    z-index: 2;
+}
+
+.overlay {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+
 
 .bold {
     font-weight: 700;
