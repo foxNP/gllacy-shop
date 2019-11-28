@@ -86,6 +86,23 @@ a {
     cursor: pointer;
 }
 
+.c-input,
+.c-textarea {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: rgba(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(178, 178, 178);
+    transition: all .3s;
+}
+
+.c-input:hover,
+.c-textarea:hover {
+    box-shadow: inset 0px 0px 0px 1px rgb(154, 154, 154);
+    border-color: rgb(154, 154, 154);
+}
 
 h1 {
     font-size: 35px;
@@ -316,8 +333,6 @@ h3 {
     width: 311px;
     margin: 20px 15px;
     padding: 9px 10px;
-    border: 1px solid #bec0be;
-    border-radius: 5px;
     font-weight: 400;
     line-height: 24px;
     font-size: 14px;
@@ -379,8 +394,9 @@ h3 {
     width: 100%;
     padding: 12px 14px;
     margin-bottom: 20px;
-    border: 1px solid #bec0be;
-    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .entrance-icon {
@@ -736,6 +752,7 @@ h3 {
     margin-top: 26px;
     margin-left: 10px;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .products {
@@ -1269,29 +1286,109 @@ h3 {
     border: none;
 }
 
-.modal-feedback {
-    position: fixed;
-    width: 480px;
-    color: #000000;
-    background-color: #f8f7f4;
-    top: 340px;
-    left: 50%;
-    margin-left: -240px;
-    z-index: 2;
-}
-
-.overlay {
-
-    width: 100%;
-    height: 100%;
-    background-color: rgba(40, 40, 40, 0.5);
-}
-
-
-
 .bold {
     font-weight: 700;
 }
+
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+.modal-show {
+    display: block;
+}
+
+.modal {
+    border-radius: 14px;
+}
+
+.modal-feedback {
+    position: fixed;
+    top: 340px;
+    left: 50%;
+    margin-left: -240px;
+    width: 480px;
+    padding: 16px 25px 25px 20px;
+    color: #000000;
+    background-color: #f8f7f4;
+    z-index: 2;
+}
+
+.modal-feedback h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.modal-close::before, .modal-close::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 1px;
+    width: 19px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form .button {
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.feedback-input {
+    width: 267px;
+}
+
+.c-feedback {
+    margin: 10px 0;
+}
+
+.feedback-textarea {
+    resize: none;
+}
+
+
+
+
+
+
+
+
 
 
 
