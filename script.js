@@ -48,3 +48,4 @@ ymaps.ready(function () {
         .add(myPlacemark)
         .add(myPlacemarkWithContent);
 });
+

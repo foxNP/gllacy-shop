@@ -1290,6 +1290,10 @@ h3 {
     font-weight: 700;
 }
 
+.modal {
+    border-radius: 14px;
+}
+
 .overlay {
     display: none;
     width: 100%;
@@ -1301,24 +1305,21 @@ h3 {
     background-color: rgba(40, 40, 40, 0.5);
 }
 
-.modal-show {
-    display: block;
-}
-
-.modal {
-    border-radius: 14px;
-}
-
 .modal-feedback {
+    display: none;
     position: fixed;
-    top: 340px;
+    top: 50%;
     left: 50%;
-    margin-left: -240px;
+    transform: translate(-50%, -50%);
     width: 480px;
     padding: 16px 25px 25px 20px;
     color: #000000;
     background-color: #f8f7f4;
-    z-index: 2;
+    z-index: 3;
+}
+
+.modal-show {
+    display: block;
 }
 
 .modal-feedback h4 {
@@ -1380,24 +1381,5 @@ h3 {
 
 .feedback-textarea {
     resize: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.main {
-    min-height: calc(900px - 182px);
 }
 

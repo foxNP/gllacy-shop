@@ -276,41 +276,30 @@
         </div>
     </div>
 </footer>
-<section class="overlay">
+<div class="overlay">
+
+</div>
     <div class="modal modal-feedback">
     <h4>Мы обязательно вам ответим!</h4>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="c-feedback">
             <label class="visually-hidden" for="user-name">Как вас зовут?</label>
-            <input class="c-input feedback-input" type="text" placeholder="Как вас зовут?" id="user-name" required>
+            <input class="c-input feedback-input" type="text" placeholder="Как вас зовут?" name="user-name" id="user-name" required>
         </div>
         <div class="c-feedback">
             <label class="visually-hidden" for="user-email">Ваша почта для ответа?</label>
-            <input type="email" class="c-input feedback-input"  placeholder="Ваша почта для ответа?" id="user-email" required>
+            <input type="email" class="c-input feedback-input"  placeholder="Ваша почта для ответа?" name="user-email" id="user-email" required>
         </div>
         <div class="c-feedback">
             <label class="visually-hidden" for="feedback-letter">Напишите что-нибудь...</label>
-            <textarea class="c-textarea feedback-textarea"  rows="6" cols="48" placeholder="Напишите что-нибудь..." id="feedback-letter" required></textarea>
+            <textarea class="c-textarea feedback-textarea"  rows="6" cols="48" placeholder="Напишите что-нибудь..." name="feedback-letter" id="feedback-letter" required></textarea>
         </div>
         <button class="button" type="submit">Отправить</button>
     </form>
     <button class="modal-close">Закрыть</button>
     </div>
-</section>
-<script>
-    var link = document.querySelector(".link-feedback");
-    var popup = document.querySelector(".overlay");
-    var close = document.querySelector(".modal-close");
+<script src="./popup.js">
 
-    link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-    });
-
-    close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-    });
 </script>
 </body>
 </html>
