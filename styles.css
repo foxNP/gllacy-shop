@@ -481,6 +481,7 @@ h3 {
     height: 33px;
     border-radius: 50%;
     background-size: cover;
+    background-position: center center;
     margin-right: 14px;
 }
 
@@ -1030,6 +1031,7 @@ h3 {
     background-repeat: no-repeat;
     border-radius: 14px;
     background-size: cover;
+    background-position: center center;
 }
 
 .promo-chocolate {
@@ -1037,6 +1039,7 @@ h3 {
     background-repeat: no-repeat;
     border-radius: 14px;
     background-size: cover;
+    background-position: center center;
 }
 
 .promo-blog {
@@ -1046,6 +1049,7 @@ h3 {
     background-repeat: no-repeat;
     border-radius: 14px;
     background-size: cover;
+    background-position: center center;
 }
 
 .promo-blog .promo-link {
@@ -1053,14 +1057,52 @@ h3 {
     line-height: 30px;
     font-weight: 700;
     color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.promo-blog-new {
+    margin-top: 23px;
+    margin-bottom: 3px;
 }
 
 .promo-link{
     box-shadow:0px 2px 0px 0px rgba(0,0,0,0);
 }
 
-.promo-form {
+.promo-form-wrapper {
+    padding: 5px;
     color: #000000;
+    background: repeating-linear-gradient(135deg, #ffffff, #ffffff 5px, #92cdff 0, #92cdff 10px, #fe9e90 0, #fe9e90 15px);
+    border-radius: 14px;
+}
+
+.promo-form {
+    background-color: #fdfdfc;
+    border-radius: 14px;
+    padding: 28px 20px 35px 21px;
+}
+
+.promo-form .mailing {
+    margin-bottom: 35px;
+}
+
+.mailing-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mailing-form .field-form {
+    width: 227px;
+}
+
+.mailing-form .button {
+    width: 130px;
+}
+
+@media screen and (min-width: 1240px) {
+    .mailing-form .field-form {
+        width: 370px;
+    }
 }
 
 #map {

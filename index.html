@@ -192,18 +192,20 @@
         </section>
         <section class="promo promo2">
             <div class="promo-card promo-blog">
-                  <div>Новое в нашем блоге</div>
-                <a href="#" class="promo-link">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
+                  <div class="promo-blog-new">Новое в нашем блоге</div>
+                <a href="#"><span class="promo-link">10 способов сервировки<br> фруктовых щербетов к<br>столу</span></a>
             </div>
-            <div class="promo-card promo-form">
-                <span>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </span>
-                <form>
-                    <label class="">
-                        <input class="c-input" name="mailing" type="email" placeholder="Электронная почта">
+            <div class="promo-card promo-form-wrapper">
+                <div class="promo-form">
+                <div class="mailing">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </div>
+                <form class="mailing-form">
+                    <label>
+                        <input class="c-input field-form" name="mailing" type="email" placeholder="Электронная почта">
                         <span class="visually-hidden">подписатьсчя на рассылку</span>
                     </label>
                     <button class="button">Отправить</button>
                 </form>
+                </div>
             </div>
         </section>
     </div>
@@ -220,7 +222,7 @@
         </div>
         <div id="map"></div>
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ee84bb87-99fd-4001-95f7-8fa65d292808" type="text/javascript"></script>
-        <script src="./script.js" type="text/javascript"></script>
+
     </section>
 </main>
 
@@ -298,8 +300,6 @@
     </form>
     <button class="modal-close">Закрыть</button>
     </div>
-<script src="./popup.js">
-
-</script>
+<script src="./script.js" type="text/javascript"></script>
 </body>
 </html>
