@@ -33,13 +33,19 @@
 
     var link = document.querySelector(".link-feedback");
     var popup = document.querySelector(".modal-feedback");
+    var name = popup.querySelector("[name=user-name]");
+    var mail = popup.querySelector("[name=user-mail]");
     var close = document.querySelector(".modal-close");
     var blackout = document.querySelector(".overlay");
+    var form = popup.querySelector("form")
+
+
 
     link.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
         blackout.classList.add("modal-show");
+        name.focus();
     });
 
     close.addEventListener("click", function (evt) {
@@ -53,6 +59,12 @@
         evt.preventDefault();
         popup.classList.remove("modal-show");
         blackout.classList.remove("modal-show");
+    });
+
+    form.addEventListener("submit", function (evt) {
+        if (!name.value || !mail.value) {
+        evt.preventDefault();
+        console.log("нужно ввести данные")}
     });
 })();
 
