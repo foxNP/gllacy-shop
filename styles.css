@@ -47,6 +47,7 @@ body {
     background-image: url("./img/background3.png");
     background-repeat: no-repeat;
     background-position: center top;
+    z-index: 4;
 }
 
 .background-2 {
@@ -54,6 +55,7 @@ body {
     background-image: url("./img/background2.png");
     background-repeat: no-repeat;
     background-position: center top;
+    z-index: 2;
 }
 
 .background-1 {
@@ -61,6 +63,7 @@ body {
     background-image: url("./img/background1.png");
     background-repeat: no-repeat;
     background-position: center top;
+    z-index: 3;
 }
 
 a {
@@ -153,6 +156,7 @@ h3 {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
+    z-index: 2;
 }
 
 .header-content .logo {
@@ -719,10 +723,21 @@ h3 {
     height: 4px;
     background-color: #adb6b1;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .scale {
+    position: relative;
     width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.scale-inner {
+    position: absolute;
+    top: 0;
+    left: 34px;
+    width: 83px;
     height: 4px;
     background-color: #ffffff;
 }
@@ -743,29 +758,39 @@ h3 {
     margin: 6px 0 12px 0;
 }
 
-.fillers-list label::before {
+.checkbox-span {
+    position: relative;
+}
+
+.fillers-list .checkbox-span::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -1px;
+    left: -35px;
     width: 20px;
     height: 20px;
     border: 2px solid #ffffff;
     border-radius: 4px;
 }
 
-.fillers-list label::after {
-    content: url("./img/svg/check.svg");
+.fillers-list .checkbox-span::after {
+    content: "";
     position: absolute;
-    left: 0;
-    top: -2px;
-    width: 30px;
-    height: 30px;
-    opacity: 0;
-    transition: opacity 400ms;
+    left: -26px;
+    top: -5px;
+    width: 9px;
+    height: 18px;
+    border-right: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    border-color: transparent;
+    transform: rotate(45deg);
 }
 
-.fat-list label::before {
+.checkbox-input:checked + .checkbox-span::after {
+    border-color: #ffffff;
+}
+
+.fat-list .radio-span::before {
     content: "";
     position: absolute;
     top: -3px;
@@ -776,17 +801,19 @@ h3 {
     border-radius: 50%;
 }
 
-.fat-list label::after {
+.fat-list .radio-span::after {
     content: "";
     width: 8px;
     height: 8px;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 50%;
     position: absolute;
     left: 7px;
     top: 4px;
-    opacity: 0;
-    transition: opacity 400ms;
+}
+
+.radio-input:checked + .radio-span::after {
+    background-color: #ffffff;
 }
 
 .filter legend {
